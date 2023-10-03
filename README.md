@@ -5,8 +5,8 @@ Módulo assíncrono para processamento de imagens
 
 Tecnologias utilizadas
 
-Java 17
-Spring Boot
-Minio
-Docker
-Apache Kafka
+1. Java 17
+2. Spring Boot
+3. Minio
+4. Docker
+5. Apache Kafka
