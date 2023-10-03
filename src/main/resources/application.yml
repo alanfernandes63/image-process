@@ -1,0 +1,30 @@
+spring:
+  profiles:
+    active: dev
+---
+spring:
+  kafka:
+    consumer:
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    producer:
+      value-serializer: org.springframework.kafka.support.serializer.JsonDeserializer
+  config:
+    activate:
+      on-profile: "dev"
+      kafka:
+        host: "localhost"
+        port: "9092"
+        topic: "image"
+        group-id: "upload-image"
+      minio:
+        host: "http://127.0.0.1"
+        port: "9000"
+        access-key: "minio"
+        secret-key: "Strong#Pass#2022"
+---
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
